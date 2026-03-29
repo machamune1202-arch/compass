@@ -2,112 +2,163 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="-Tk5zp7prFfgZStwMa3gYkkaBJ4SG62XkJ0z2wuB-KA" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compass Official - The Peak of Stationery</title>
     <style>
-        body { background-color: #000; color: #d4af37; font-family: 'serif'; text-align: center; margin: 0; padding: 0; line-height: 1.8; }
-        header { padding: 150px 20px; border-bottom: 2px solid #d4af37; background: linear-gradient(to bottom, #1a1a1a, #000); }
-        h1 { font-size: 4em; letter-spacing: 15px; margin: 0; text-shadow: 0 0 30px rgba(212, 175, 55, 0.5); }
-        .scroll-down { margin-top: 30px; font-size: 0.8em; letter-spacing: 5px; animation: blink 2s infinite; }
-        @keyframes blink { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; } }
+        :root { --gold: #d4af37; --bg: #000; --card: #0a0a0a; --text: #ccc; }
+        body { background-color: var(--bg); color: var(--text); font-family: 'Times New Roman', serif; text-align: center; margin: 0; padding: 0; line-height: 2; overflow-x: hidden; }
         
-        .section { padding: 100px 20px; max-width: 900px; margin: 0 auto; border-bottom: 1px solid #222; }
-        h2 { font-size: 2.5em; border-bottom: 2px solid #d4af37; display: inline-block; padding-bottom: 10px; margin-bottom: 60px; letter-spacing: 5px; }
+        /* Loading Animation */
+        header { padding: 200px 20px; border-bottom: 2px solid var(--gold); background: radial-gradient(circle, #1a1a1a 0%, #000 100%); position: relative; }
+        header h1 { font-size: 5em; letter-spacing: 20px; margin: 0; color: #fff; text-shadow: 0 0 40px rgba(212, 175, 55, 0.6); }
+        header p { letter-spacing: 10px; color: var(--gold); margin-top: 30px; font-weight: bold; }
         
-        /* 商品カードを巨大化・重厚化 */
-        .tier { border: 1px solid #d4af37; margin: 60px auto; padding: 50px; background: #0a0a0a; border-radius: 0; text-align: left; position: relative; }
-        h3 { font-size: 2.8em; margin: 0 0 20px 0; color: #fff; letter-spacing: 4px; }
-        .tagline { font-weight: bold; color: #d4af37; font-size: 1.4em; margin-bottom: 25px; border-left: 5px solid #d4af37; padding-left: 20px; }
-        .description { color: #aaa; font-size: 1.1em; margin-bottom: 30px; }
-        .spec-list { list-style: none; padding: 0; color: #888; font-size: 0.9em; margin-bottom: 30px; }
-        .spec-list li { border-bottom: 1px solid #1a1a1a; padding: 10px 0; }
-        .price { font-size: 2em; color: #d4af37; font-weight: bold; text-align: right; margin-top: 30px; }
+        .section { padding: 120px 20px; max-width: 1000px; margin: 0 auto; border-bottom: 1px solid #222; opacity: 0; transform: translateY(30px); animation: fadeIn 1s forwards; }
+        @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
 
-        .btn { display: inline-block; padding: 20px 40px; text-decoration: none; font-weight: bold; margin-top: 30px; transition: 0.4s; width: 100%; text-align: center; box-sizing: border-box; font-size: 1.2em; letter-spacing: 2px; }
-        .apply-btn { background: #d4af37; color: #000; border: 1px solid #d4af37; }
-        .apply-btn:hover { background: transparent; color: #d4af37; }
-        .buy-btn { background: transparent; color: #d4af37; border: 1px solid #444; }
+        h2 { font-size: 2.8em; border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 15px; margin-bottom: 80px; letter-spacing: 6px; color: #fff; }
+        
+        /* 哲学セクション */
+        .philosophy { font-size: 1.3em; line-height: 2.8; text-align: justify; margin: 40px auto; padding: 0 40px; border-left: 2px solid var(--gold); }
 
-        .concept-text { font-size: 1.2em; color: #ccc; line-height: 2.5; text-align: justify; margin-bottom: 40px; }
-        .legal-box { background: #0a0a0a; border: 1px solid #222; padding: 40px; text-align: left; font-size: 0.9em; color: #888; }
-        footer { padding: 120px; color: #444; font-size: 0.9em; letter-spacing: 2px; }
+        /* Aeterna 詳細 */
+        .product-focus { background: #050505; border: 1px dashed var(--gold); padding: 60px; margin: 60px 0; text-align: left; }
+        .product-focus h3 { font-size: 3em; color: var(--gold); margin: 0 0 30px 0; border-bottom: 1px solid #333; }
+        .spec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; }
+        .spec-item h4 { color: var(--gold); margin-bottom: 10px; font-size: 1.2em; border-left: 3px solid var(--gold); padding-left: 10px; }
+
+        /* カードデザイン */
+        .tier-card { border: 1px solid #333; margin: 40px 0; padding: 50px; background: var(--card); text-align: left; transition: 0.5s; position: relative; overflow: hidden; }
+        .tier-card:hover { border-color: var(--gold); background: #111; }
+        .tier-card.premium { border: 2px solid var(--gold); box-shadow: 0 0 50px rgba(212,175,55,0.1); }
+        .price-tag { font-size: 2.5em; color: var(--gold); font-weight: bold; margin-top: 40px; display: block; text-align: right; }
+
+        /* ボタン */
+        .btn { display: inline-block; padding: 25px 50px; text-decoration: none; font-weight: bold; margin-top: 40px; transition: 0.4s; width: 100%; text-align: center; box-sizing: border-box; font-size: 1.3em; letter-spacing: 3px; cursor: pointer; }
+        .gold-btn { background: var(--gold); color: #000; border: 1px solid var(--gold); }
+        .gold-btn:hover { background: transparent; color: var(--gold); }
+        .outline-btn { background: transparent; color: var(--gold); border: 1px solid #444; }
+        .outline-btn:hover { border-color: var(--gold); }
+
+        /* Q&A */
+        .qa-box { text-align: left; margin: 40px 0; }
+        .qa-item { margin-bottom: 30px; border-bottom: 1px solid #1a1a1a; padding-bottom: 20px; }
+        .question { color: var(--gold); font-weight: bold; font-size: 1.1em; display: block; margin-bottom: 10px; }
+
+        .legal-box { background: #0a0a0a; border: 1px solid #222; padding: 50px; text-align: left; font-size: 0.95em; line-height: 2.5; }
+        footer { padding: 150px; border-top: 1px solid #222; color: #555; font-size: 0.9em; letter-spacing: 3px; }
     </style>
 </head>
 <body>
+
     <header>
         <h1>C O M P A S S</h1>
-        <p style="letter-spacing: 8px; color: #d4af37; margin-top: 20px;">THE PINNACLE OF JAPANESE CRAFT</p>
-        <div class="scroll-down">SCROLL TO DISCOVER</div>
+        <p>THE PINNACLE OF JAPANESE PRECISION</p>
+        <div style="margin-top: 50px; color: #555; font-size: 0.8em; letter-spacing: 5px;">EST. 2026 / OKAZAKI, JAPAN</div>
     </header>
 
-    <div class="section">
-        <h2>Concept</h2>
-        <p class="concept-text">
-            「書く」という行為は、思考を形にする神聖なプロセスだ。
+    <div class="section" style="animation-delay: 0.2s;">
+        <h2>The Concept</h2>
+        <div class="philosophy">
+            「書く」という行為は、単なる情報の記録ではない。それは、魂を思考に変え、世界に刻む儀式だ。
             既存の筆記具に、あなたの情熱は収まっているだろうか。
-            愛知県岡崎市の小さなラボから始まったCompassは、妥協を一切排除した。
-            2.0mmの肉厚ボディ、磁力による静寂のダンパー、そして持ち手の癖に合わせる重量調整。
-            我々が作るのは、ただのペンではない。あなたの人生を刻む「相棒」である。
-        </p>
+            愛知県岡崎市のラボで生まれたCompassは、工業製品としての「効率」を拒絶する。
+            2.0mmの重厚な肉厚ボディ、磁力による無音の制動、そして0.01mm単位の研磨。
+            我々が作るのは、道具ではない。あなたの人生という旅を導く「羅針盤（Compass）」である。
+        </div>
     </div>
 
-    <div class="section">
-        <h2>The Lineup</h2>
+    <div class="section" style="animation-delay: 0.4s;">
+        <h2>The Masterpiece</h2>
+        <div class="product-focus">
+            <h3>Aeterna <small style="font-size: 0.4em; color: #fff; vertical-align: middle;">[エテルナ]</small></h3>
+            <p style="font-size: 1.2em; border-bottom: 1px solid #222; padding-bottom: 20px;">
+                Compassの到達点。磁力と金属が織りなす、静寂の筆記体験。
+            </p>
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <h4>Magnetic Damper</h4>
+                    <p>非接触の磁力を利用したダンパー機構を搭載。ノック時の衝撃を吸収し、完全な無音と究極の感触を実現。</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Mirror Finish</h4>
+                    <p>代表自らが数時間をかけて行う手作業の鏡面研磨。手にした瞬間、吸い付くような質感を約束します。</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Variable Weight</h4>
+                    <p>審査時にヒアリングした好みに合わせ、重心位置をミリ単位で調整。あなただけにパーソナライズされた1本。</p>
+                </div>
+                <div class="spec-item">
+                    <h4>Limited Serial</h4>
+                    <p>すべての個体に世界で1つのシリアルナンバーを刻印。所有することの誇りを。 </p>
+                </div>
+            </div>
+            <span class="price-tag">JPY 18,000</span>
+            <a href="https://forms.gle/YjRDwhBGma63cT1QA" class="btn gold-btn">Aeterna 注文審査に申し込む</a>
+            <p style="text-align: center; font-size: 0.8em; margin-top: 20px; color: #888;">※審査制につき、購入権の付与までにお時間をいただく場合がございます。</p>
+        </div>
+    </div>
+
+    <div class="section" style="animation-delay: 0.6s;">
+        <h2>Product Lineup</h2>
         
-        <div class="tier" style="border-width: 3px; box-shadow: 0 0 50px rgba(212, 175, 55, 0.15);">
-            <h3>Aeterna - エテルナ</h3>
-            <p class="tagline">【究極】磁力ダンパー ✕ 鏡面研磨 ✕ カスタム重心</p>
-            <p class="description">一生モノの「作品」。代表自らが一本ずつ最終調整を行い、あなたの手に馴染む最高の状態でお届けします。完全受注生産につき、厳正なる審査を通過された方のみが所有を許されます。</p>
-            <ul class="spec-list">
-                <li>● 内部機構：非接触磁力ダンパー搭載</li>
-                <li>● ボディ：高剛性ステンレス削り出し</li>
-                <li>● 調整：完全フルカスタム重心設定</li>
-            </ul>
-            <p class="price">¥18,000</p>
-            <a href="https://forms.gle/MvswgLbadgeZWSFy9" class="btn apply-btn">Aeterna 注文審査に申し込む</a>
+        <div class="tier-card">
+            <h3>Oracle [オラクル]</h3>
+            <p style="color: var(--gold); font-weight: bold;">【沈黙と自動】</p>
+            <p>極限の集中を求める者へ。ノック音を消し去る消音構造と、思考を止めない自動芯出し機構を融合。</p>
+            <span class="price-tag">JPY 9,000</span>
+            <a href="#" class="btn outline-btn">準備中</a>
         </div>
 
-        <div class="tier">
-            <h3>Oracle - オラクル</h3>
-            <p class="tagline">【沈黙】静音ノック ✕ 自動芯出し機構</p>
-            <p class="description">極限の集中を求めるプロフェッショナルのためのモデル。ノック音を極限まで抑え、思考を一切止めない自動芯出し機能を搭載。</p>
-            <p class="price">¥9,000</p>
-            <a href="#" class="btn buy-btn">Oracle を予約する（準備中）</a>
+        <div class="tier-card">
+            <h3>Zenith [ゼニス]</h3>
+            <p style="color: var(--gold); font-weight: bold;">【次世代の剛性】</p>
+            <p>カーボン配合特殊フィラメントを用いた3D造形。超軽量でありながら、金属を凌駕するタフネス。</p>
+            <span class="price-tag">JPY 5,500</span>
+            <a href="#" class="btn outline-btn">準備中</a>
         </div>
 
-        <div class="tier">
-            <h3>Zenith - ゼニス</h3>
-            <p class="tagline">【先端】カーボン配合特殊フィラメント</p>
-            <p class="description">3Dプリント技術の限界に挑戦。超軽量でありながら、金属に匹敵する剛性を実現した次世代の筆記具。</p>
-            <p class="price">¥5,500</p>
-            <a href="#" class="btn buy-btn">Zenith を詳しく見る（準備中）</a>
-        </div>
-
-        <div class="tier">
-            <h3>SPARK - スパーク</h3>
-            <p class="tagline">【不変】肉厚2.0mm タフネス・スタンダード</p>
-            <p class="description">Compassの原点。どんな過酷な環境でも、どんなに使い込んでも壊れない。「道具」としての完成度を追求した最強の入門機。</p>
-            <p class="price">¥500</p>
-            <a href="#" class="btn buy-btn">SPARK を購入する（準備中）</a>
+        <div class="tier-card">
+            <h3>SPARK [スパーク]</h3>
+            <p style="color: var(--gold); font-weight: bold;">【不変のスタンダード】</p>
+            <p>肉厚2.0mm。どんな過酷な環境でも、どんなに使い込んでも壊れない。Compassの哲学を凝縮した入門機。</p>
+            <span class="price-tag">JPY 500</span>
+            <a href="#" class="btn outline-btn">準備中</a>
         </div>
     </div>
 
-    <div class="section">
-        <h2>Legal Information</h2>
+    <div class="section" style="animation-delay: 0.8s;">
+        <h2>FAQ</h2>
+        <div class="qa-box">
+            <div class="qa-item">
+                <span class="question">Q. なぜ審査制なのですか？</span>
+                <p>A. Aeternaは一本ずつ代表が調整を行うため、月間の生産数に限りがあります。また、このペンの価値を真に理解し、大切に使い続けてくださる方へ確実にお届けするための特別な措置です。</p>
+            </div>
+            <div class="qa-item">
+                <span class="question">Q. メンテナンスは可能ですか？</span>
+                <p>A. 永久保証を提供しています。不具合が生じた場合や、重心バランスの再調整を希望される場合は、いつでもラボへお送りください。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" style="animation-delay: 1s;">
+        <h2>Legal</h2>
         <div class="legal-box">
-            <h3 style="font-size: 1.2em; color: #d4af37; margin-bottom: 20px;">特定商取引法に基づく表記</h3>
-            <p>販売事業者：Compass Project</p>
-            <p>代表者名：Compass 代表</p>
-            <p>所在地：愛知県岡崎市（詳細は契約時に開示）</p>
-            <p>支払方法：銀行振込 / PayPay（準備中）</p>
-            <p>配送：日本国内（ヤマト運輸 / 日本郵便）</p>
+            <h3 style="color: var(--gold); margin-top: 0;">特定商取引法に基づく表記</h3>
+            <p><strong>販売事業者名：</strong>Compass Project</p>
+            <p><strong>代表者名：</strong>Compass 代表</p>
+            <p><strong>所在地：</strong>愛知県岡崎市（詳細は売買契約成立時に遅滞なく開示いたします）</p>
+            <p><strong>お問い合わせ：</strong>各SNS DM、または審査通過後のメールにて承ります</p>
+            <p><strong>商品の引き渡し時期：</strong>Aeternaは審査通過・決済確認後、1ヶ月〜2ヶ月程度の製作期間を頂戴します</p>
+            <p><strong>返品・キャンセル：</strong>受注生産品につき、お客様都合による返品は承れません。欠陥がある場合は無償修理・交換対応いたします</p>
         </div>
     </div>
 
     <footer>
         <p>C O M P A S S</p>
-        <p>© 2026 Compass Project. All Rights Reserved. Designed in Okazaki.</p>
+        <p>© 2026 Compass Project. All Rights Reserved.</p>
+        <p style="font-size: 0.7em; margin-top: 20px;">Designed and Engineered in Okazaki, Japan.</p>
     </footer>
+
 </body>
 </html>
