@@ -15,24 +15,21 @@
         .section { padding: 100px 20px; max-width: 1000px; margin: 0 auto; border-bottom: 1px solid #222; }
         h2 { font-size: 2.5em; border-bottom: 2px solid var(--gold); display: inline-block; padding-bottom: 15px; margin-bottom: 60px; letter-spacing: 5px; color: #fff; }
 
-        /* 全モデル共通カード */
-        .tier-card { border: 1px solid #333; margin: 40px 0; padding: 50px; background: var(--card); text-align: left; transition: 0.5s; }
+        .tier-card { border: 1px solid #333; margin: 40px 0; padding: 50px; background: var(--card); text-align: left; transition: 0.5s; position: relative; }
         .tier-card:hover { border-color: var(--gold); transform: translateY(-5px); }
         .tier-card.premium { border: 2px solid var(--gold); box-shadow: 0 0 50px rgba(212,175,55,0.15); }
         
         .tier-tag { color: var(--gold); font-weight: bold; font-size: 0.9em; letter-spacing: 3px; display: block; margin-bottom: 10px; }
         h3 { font-size: 2.5em; margin: 0 0 15px 0; color: #fff; }
         .description { font-size: 1.1em; color: #aaa; margin-bottom: 20px; }
-        .price { font-size: 2em; color: var(--gold); font-weight: bold; text-align: right; display: block; }
+        .price { font-size: 2.2em; color: var(--gold); font-weight: bold; text-align: right; display: block; margin-top: 20px; }
 
-        /* ボタン */
         .btn { display: inline-block; padding: 20px 40px; text-decoration: none; font-weight: bold; margin-top: 30px; transition: 0.4s; width: 100%; text-align: center; box-sizing: border-box; font-size: 1.2em; letter-spacing: 2px; }
         .gold-btn { background: var(--gold); color: #000; border: 1px solid var(--gold); }
+        .gold-btn:hover { background: transparent; color: var(--gold); }
         .outline-btn { background: transparent; color: var(--gold); border: 1px solid #444; }
-        .outline-btn:hover { border-color: var(--gold); }
 
-        /* Q&A / Legal */
-        .legal-box { background: #0a0a0a; border: 1px solid #222; padding: 40px; text-align: left; font-size: 0.9em; line-height: 2.2; }
+        .legal-box { background: #0a0a0a; border: 1px solid #222; padding: 40px; text-align: left; font-size: 0.9em; line-height: 2.2; margin-top: 40px; }
         footer { padding: 100px; color: #444; font-size: 0.8em; letter-spacing: 3px; }
     </style>
 </head>
@@ -44,20 +41,27 @@
     </header>
 
     <div class="section">
-        <h2>Lineup</h2>
-
+        <h2>The Masterpiece</h2>
         <div class="tier-card premium">
-            <span class="tier-tag">RANK: ULTIMATE</span>
+            <span class="tier-tag">RANK: ULTIMATE / 審査制</span>
             <h3>Aeterna - エテルナ</h3>
-            <p class="description">【磁力ダンパー ✕ 鏡面研磨 ✕ カスタム重心】<br>Compassの到達点。代表自らが調整する一生モノの作品。審査制による限定販売。</p>
+            <p class="description">
+                【磁力ダンパー ✕ 鏡面研磨 ✕ カスタム重心】<br>
+                Compassの到達点。代表自らが数時間をかけて最終調整を行う「作品」。<br>
+                一生モノの筆記体験を、選ばれし所有者へ。
+            </p>
             <span class="price">¥18,000</span>
-            <a href="https://forms.gle/YjRDwhBGma63cT1QA" class="btn gold-btn">注文審査に申し込む</a>
+            <a href="https://forms.gle/YjRDwhBGma63cT1QA" class="btn gold-btn">Aeterna 注文審査に申し込む</a>
         </div>
+    </div>
+
+    <div class="section">
+        <h2>Product Lineup</h2>
 
         <div class="tier-card">
             <span class="tier-tag">RANK: PROFESSIONAL</span>
             <h3>Oracle - オラクル</h3>
-            <p class="description">【静音ノック ✕ 自動芯出し】<br>極限の集中を求めるプロへ。思考を止めない自動機構と無音の美学を融合。</p>
+            <p class="description">【静音ノック ✕ 自動芯出し】<br>極限の集中を求めるプロフェッショナルへ。ノック音を消し去り、思考を止めない自動機構を搭載。</p>
             <span class="price">¥9,000</span>
             <a href="#" class="btn outline-btn">準備中</a>
         </div>
@@ -65,7 +69,7 @@
         <div class="tier-card">
             <span class="tier-tag">RANK: ADVANCED</span>
             <h3>Zenith - ゼニス</h3>
-            <p class="description">【カーボンフィラメント ✕ 次世代造形】<br>3D造形の限界。超軽量でありながら、金属に匹敵する剛性を実現。</p>
+            <p class="description">【カーボンフィラメント ✕ 次世代造形】<br>超軽量かつ金属に匹敵する高剛性。3Dプリント技術の限界を追求したモデル。</p>
             <span class="price">¥5,500</span>
             <a href="#" class="btn outline-btn">準備中</a>
         </div>
@@ -73,7 +77,7 @@
         <div class="tier-card">
             <span class="tier-tag">RANK: STANDARD</span>
             <h3>Basics - ベーシックス</h3>
-            <p class="description">【アルミ削り出し ✕ 高精度ローレット】<br>質実剛健。日々の学習・仕事を支える、Compassが提示する「標準」の再定義。</p>
+            <p class="description">【アルミ削り出し ✕ 高精度ローレット】<br>質実剛健。日々の学習を支える、Compassが提示する「標準」の再定義。</p>
             <span class="price">¥2,500</span>
             <a href="#" class="btn outline-btn">準備中</a>
         </div>
@@ -81,7 +85,7 @@
         <div class="tier-card">
             <span class="tier-tag">RANK: COMFORT</span>
             <h3>Flow - フロウ</h3>
-            <p class="description">【エルゴノミクス ✕ 滑り止め加工】<br>「疲れない」を科学したモデル。速記や長時間の試験に最適な、手に吸い付く曲線美。</p>
+            <p class="description">【エルゴノミクス ✕ 滑り止め加工】<br>「疲れない」を科学した速記用モデル。手に吸い付くような曲線美を実現。</p>
             <span class="price">¥1,200</span>
             <a href="#" class="btn outline-btn">準備中</a>
         </div>
@@ -89,7 +93,7 @@
         <div class="tier-card">
             <span class="tier-tag">RANK: ENTRY</span>
             <h3>SPARK - スパーク</h3>
-            <p class="description">【肉厚2.0mm ✕ タフネス】<br>Compassの哲学をその手に。どんなに使い込んでも壊れない、最強の入門筆記具。</p>
+            <p class="description">【肉厚2.0mm ✕ タフネス】<br>どんなに使い込んでも壊れない。Compassの哲学を凝縮した最強の入門筆記具。</p>
             <span class="price">¥500</span>
             <a href="#" class="btn outline-btn">準備中</a>
         </div>
@@ -98,14 +102,17 @@
     <div class="section">
         <h2>Legal Information</h2>
         <div class="legal-box">
-            <p>販売事業者：Compass Project / 代表者名：Compass 代表</p>
-            <p>所在地：愛知県岡崎市（詳細は契約時に開示）</p>
-            <p>支払方法：銀行振込 / PayPay（準備中）</p>
+            <h3 style="color: var(--gold); margin-top: 0;">特定商取引法に基づく表記</h3>
+            <p><strong>販売事業者：</strong>Compass Project / <strong>代表者名：</strong>Compass 代表</p>
+            <p><strong>所在地：</strong>愛知県岡崎市（詳細は契約成立時に開示）</p>
+            <p><strong>支払方法：</strong>銀行振込 / PayPay（準備中）</p>
+            <p><strong>配送範囲：</strong>日本全国対応（学校内での金銭授受および対面販売は行っておりません）</p>
         </div>
     </div>
 
     <footer>
         <p>© 2026 Compass Project. All Rights Reserved.</p>
+        <p style="font-size: 0.7em; margin-top: 10px;">Designed and Engineered in Okazaki, Japan.</p>
     </footer>
 
 </body>
