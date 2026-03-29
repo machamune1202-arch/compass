@@ -4,101 +4,110 @@
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="-Tk5zp7prFfgZStwMa3gYkkaBJ4SG62XkJ0z2wuB-KA" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compass Official - Online Store</title>
+    <title>Compass Official - The Peak of Stationery</title>
     <style>
         body { background-color: #000; color: #d4af37; font-family: 'serif'; text-align: center; margin: 0; padding: 0; line-height: 1.8; }
-        header { padding: 120px 20px; border-bottom: 2px solid #d4af37; background: linear-gradient(to bottom, #1a1a1a, #000); }
-        h1 { font-size: 3.5em; letter-spacing: 12px; margin: 0; text-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
-        .section { padding: 80px 20px; max-width: 800px; margin: 0 auto; border-bottom: 1px solid #222; }
-        h2 { font-size: 2.2em; border-bottom: 2px solid #d4af37; display: inline-block; padding-bottom: 10px; margin-bottom: 40px; }
+        header { padding: 150px 20px; border-bottom: 2px solid #d4af37; background: linear-gradient(to bottom, #1a1a1a, #000); }
+        h1 { font-size: 4em; letter-spacing: 15px; margin: 0; text-shadow: 0 0 30px rgba(212, 175, 55, 0.5); }
+        .scroll-down { margin-top: 30px; font-size: 0.8em; letter-spacing: 5px; animation: blink 2s infinite; }
+        @keyframes blink { 0% { opacity: 0; } 50% { opacity: 1; } 100% { opacity: 0; } }
         
-        /* 商品カード */
-        .tier { border: 1px solid #d4af37; margin: 40px auto; padding: 35px; background: #0a0a0a; border-radius: 2px; text-align: left; transition: 0.3s; }
-        h3 { font-size: 2.2em; margin: 0 0 10px 0; color: #fff; letter-spacing: 2px; }
-        .tagline { font-weight: bold; color: #d4af37; font-size: 1.2em; margin-bottom: 15px; border-left: 3px solid #d4af37; padding-left: 15px; }
-        p { color: #ccc; margin-bottom: 15px; }
-        .price { font-size: 1.6em; color: #d4af37; font-weight: bold; margin-top: 20px; border-top: 1px solid #333; padding-top: 15px; text-align: right; }
+        .section { padding: 100px 20px; max-width: 900px; margin: 0 auto; border-bottom: 1px solid #222; }
+        h2 { font-size: 2.5em; border-bottom: 2px solid #d4af37; display: inline-block; padding-bottom: 10px; margin-bottom: 60px; letter-spacing: 5px; }
         
-        /* ボタン共通設定 */
-        .btn { display: inline-block; padding: 15px 40px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: 0.3s; width: 100%; text-align: center; box-sizing: border-box; cursor: pointer; border: 1px solid #d4af37; }
-        .buy-btn { background: transparent; color: #d4af37; }
-        .buy-btn:hover { background: #d4af37; color: #000; }
-        .apply-btn { background: #d4af37; color: #000; }
+        /* 商品カードを巨大化・重厚化 */
+        .tier { border: 1px solid #d4af37; margin: 60px auto; padding: 50px; background: #0a0a0a; border-radius: 0; text-align: left; position: relative; }
+        h3 { font-size: 2.8em; margin: 0 0 20px 0; color: #fff; letter-spacing: 4px; }
+        .tagline { font-weight: bold; color: #d4af37; font-size: 1.4em; margin-bottom: 25px; border-left: 5px solid #d4af37; padding-left: 20px; }
+        .description { color: #aaa; font-size: 1.1em; margin-bottom: 30px; }
+        .spec-list { list-style: none; padding: 0; color: #888; font-size: 0.9em; margin-bottom: 30px; }
+        .spec-list li { border-bottom: 1px solid #1a1a1a; padding: 10px 0; }
+        .price { font-size: 2em; color: #d4af37; font-weight: bold; text-align: right; margin-top: 30px; }
+
+        .btn { display: inline-block; padding: 20px 40px; text-decoration: none; font-weight: bold; margin-top: 30px; transition: 0.4s; width: 100%; text-align: center; box-sizing: border-box; font-size: 1.2em; letter-spacing: 2px; }
+        .apply-btn { background: #d4af37; color: #000; border: 1px solid #d4af37; }
         .apply-btn:hover { background: transparent; color: #d4af37; }
+        .buy-btn { background: transparent; color: #d4af37; border: 1px solid #444; }
 
-        /* CEO Profile */
-        .profile-card { background: #111; padding: 40px; border: 1px solid #333; text-align: left; }
-        .ceo-name { font-size: 2em; color: #fff; margin: 10px 0; }
-
-        /* 特定商取引法 */
-        .legal-box { background: #0a0a0a; border: 1px solid #222; padding: 30px; text-align: left; font-size: 0.85em; color: #888; margin-top: 50px; }
-        .legal-box h3 { font-size: 1.2em; color: #d4af37; border-bottom: 1px solid #333; padding-bottom: 5px; margin-bottom: 15px; }
-        .legal-item { margin-bottom: 10px; display: flex; flex-wrap: wrap; }
-        .legal-label { width: 150px; color: #d4af37; font-weight: bold; }
-
-        footer { padding: 80px; color: #444; font-size: 0.8em; }
+        .concept-text { font-size: 1.2em; color: #ccc; line-height: 2.5; text-align: justify; margin-bottom: 40px; }
+        .legal-box { background: #0a0a0a; border: 1px solid #222; padding: 40px; text-align: left; font-size: 0.9em; color: #888; }
+        footer { padding: 120px; color: #444; font-size: 0.9em; letter-spacing: 2px; }
     </style>
 </head>
 <body>
     <header>
         <h1>C O M P A S S</h1>
-        <p style="letter-spacing: 5px; color: #d4af37; margin-top: 20px;">MADE IN JAPAN PRECISION</p>
+        <p style="letter-spacing: 8px; color: #d4af37; margin-top: 20px;">THE PINNACLE OF JAPANESE CRAFT</p>
+        <div class="scroll-down">SCROLL TO DISCOVER</div>
     </header>
 
     <div class="section">
-        <h2>CEO Profile</h2>
-        <div class="profile-card">
-            <p style="font-size: 0.9em; letter-spacing: 3px; color: #d4af37;">FOUNDER / DESIGNER</p>
-            <p class="ceo-name">Compass 代表</p>
-            <p>愛知県岡崎市を拠点に活動する、理想の筆記具を追求する起業家。設計から製造、販売までを一貫して行い、日本発の技術を世界へ届ける。
-            <br>「書くことを、一生の誇りに。」</p>
-        </div>
+        <h2>Concept</h2>
+        <p class="concept-text">
+            「書く」という行為は、思考を形にする神聖なプロセスだ。
+            既存の筆記具に、あなたの情熱は収まっているだろうか。
+            愛知県岡崎市の小さなラボから始まったCompassは、妥協を一切排除した。
+            2.0mmの肉厚ボディ、磁力による静寂のダンパー、そして持ち手の癖に合わせる重量調整。
+            我々が作るのは、ただのペンではない。あなたの人生を刻む「相棒」である。
+        </p>
     </div>
 
     <div class="section">
-        <h2>Store / Lineup</h2>
+        <h2>The Lineup</h2>
         
-        <div class="tier" style="border-width: 2px; box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);">
+        <div class="tier" style="border-width: 3px; box-shadow: 0 0 50px rgba(212, 175, 55, 0.15);">
             <h3>Aeterna - エテルナ</h3>
-            <p class="tagline">【体験】磁力ダンパー、鏡面研磨、重量調整。</p>
-            <p>一生モノの「作品」。持つ者の手に合わせて完璧に調整可能な、Compassの到達点。完全受注生産につき、審査制の応募販売となります。</p>
+            <p class="tagline">【究極】磁力ダンパー ✕ 鏡面研磨 ✕ カスタム重心</p>
+            <p class="description">一生モノの「作品」。代表自らが一本ずつ最終調整を行い、あなたの手に馴染む最高の状態でお届けします。完全受注生産につき、厳正なる審査を通過された方のみが所有を許されます。</p>
+            <ul class="spec-list">
+                <li>● 内部機構：非接触磁力ダンパー搭載</li>
+                <li>● ボディ：高剛性ステンレス削り出し</li>
+                <li>● 調整：完全フルカスタム重心設定</li>
+            </ul>
             <p class="price">¥18,000</p>
-            <a href="https://docs.google.com/forms/" class="btn apply-btn">Aeterna 注文審査に申し込む</a>
+            <a href="https://forms.gle/MvswgLbadgeZWSFy9" class="btn apply-btn">Aeterna 注文審査に申し込む</a>
         </div>
 
         <div class="tier">
             <h3>Oracle - オラクル</h3>
-            <p class="tagline">【機構】静音ノック＆自動芯出し。</p>
+            <p class="tagline">【沈黙】静音ノック ✕ 自動芯出し機構</p>
+            <p class="description">極限の集中を求めるプロフェッショナルのためのモデル。ノック音を極限まで抑え、思考を一切止めない自動芯出し機能を搭載。</p>
             <p class="price">¥9,000</p>
-            <a href="#" class="btn buy-btn">購入ページへ（準備中）</a>
+            <a href="#" class="btn buy-btn">Oracle を予約する（準備中）</a>
+        </div>
+
+        <div class="tier">
+            <h3>Zenith - ゼニス</h3>
+            <p class="tagline">【先端】カーボン配合特殊フィラメント</p>
+            <p class="description">3Dプリント技術の限界に挑戦。超軽量でありながら、金属に匹敵する剛性を実現した次世代の筆記具。</p>
+            <p class="price">¥5,500</p>
+            <a href="#" class="btn buy-btn">Zenith を詳しく見る（準備中）</a>
         </div>
 
         <div class="tier">
             <h3>SPARK - スパーク</h3>
-            <p class="tagline">【剛性】肉厚2.0mm。壊れないタフな基本形。</p>
+            <p class="tagline">【不変】肉厚2.0mm タフネス・スタンダード</p>
+            <p class="description">Compassの原点。どんな過酷な環境でも、どんなに使い込んでも壊れない。「道具」としての完成度を追求した最強の入門機。</p>
             <p class="price">¥500</p>
-            <a href="#" class="btn buy-btn">購入ページへ（準備中）</a>
+            <a href="#" class="btn buy-btn">SPARK を購入する（準備中）</a>
         </div>
-        </div>
+    </div>
 
     <div class="section">
-        <h2>Legal</h2>
+        <h2>Legal Information</h2>
         <div class="legal-box">
-            <h3>特定商取引法に基づく表記</h3>
-            <div class="legal-item"><span class="legal-label">販売事業者名</span><span>Compass Project</span></div>
-            <div class="legal-item"><span class="legal-label">代表者名</span><span>Compass 代表</span></div>
-            <div class="legal-item"><span class="legal-label">所在地</span><span>愛知県岡崎市（詳細は注文確定時に開示）</span></div>
-            <div class="legal-item"><span class="legal-label">連絡先</span><span>サイト内お問い合わせ・各SNS DMまで</span></div>
-            <div class="legal-item"><span class="legal-label">販売価格</span><span>各商品詳細ページに税込価格を表示</span></div>
-            <div class="legal-item"><span class="legal-label">支払方法</span><span>銀行振込 / クレジットカード決済（準備中） / 現金（対面）</span></div>
-            <div class="legal-item"><span class="legal-label">商品引渡し時期</span><span>在庫品は3日以内、受注生産品（Aeterna等）は審査通過後1ヶ月〜</span></div>
-            <div class="legal-item"><span class="legal-label">返品・交換</span><span>商品に欠陥がある場合を除き、基本的には返品には応じられません。</span></div>
+            <h3 style="font-size: 1.2em; color: #d4af37; margin-bottom: 20px;">特定商取引法に基づく表記</h3>
+            <p>販売事業者：Compass Project</p>
+            <p>代表者名：Compass 代表</p>
+            <p>所在地：愛知県岡崎市（詳細は契約時に開示）</p>
+            <p>支払方法：銀行振込 / PayPay（準備中）</p>
+            <p>配送：日本国内（ヤマト運輸 / 日本郵便）</p>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 Compass Project. All Rights Reserved.</p>
+        <p>C O M P A S S</p>
+        <p>© 2026 Compass Project. All Rights Reserved. Designed in Okazaki.</p>
     </footer>
 </body>
 </html>
-
