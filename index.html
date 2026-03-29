@@ -3,85 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compass Official - Made in Japan</title>
+    <title>Compass Official - The Peak of Stationery</title>
     <style>
         body { background-color: #000; color: #d4af37; font-family: 'serif'; text-align: center; margin: 0; padding: 0; line-height: 1.8; }
         header { padding: 120px 20px; border-bottom: 2px solid #d4af37; background: linear-gradient(to bottom, #1a1a1a, #000); }
-        h1 { font-size: 3.8em; letter-spacing: 10px; margin: 0; text-shadow: 2px 2px 10px rgba(212, 175, 55, 0.5); }
-        .section { padding: 60px 20px; max-width: 850px; margin: 0 auto; }
-        .tier { border: 1px solid #d4af37; margin: 40px auto; padding: 35px; transition: 0.5s; background: #0a0a0a; border-radius: 8px; text-align: left; }
-        .tier:hover { transform: translateY(-5px); background: #151515; box-shadow: 0 5px 20px rgba(212, 175, 55, 0.4); }
-        .tier-label { font-size: 0.9em; border: 1px solid #d4af37; padding: 2px 10px; border-radius: 3px; margin-bottom: 15px; display: inline-block; }
-        h3 { font-size: 2.2em; margin: 10px 0; color: #fff; }
-        .tagline { font-weight: bold; color: #d4af37; font-size: 1.2em; margin-bottom: 10px; }
-        p { color: #ccc; margin-bottom: 15px; }
-        .price { font-size: 1.5em; color: #d4af37; font-weight: bold; text-align: right; border-top: 1px solid #333; padding-top: 15px; }
-        footer { padding: 80px; color: #444; font-size: 0.9em; }
+        h1 { font-size: 3.5em; letter-spacing: 12px; margin: 0; text-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
+        .section { padding: 80px 20px; max-width: 800px; margin: 0 auto; border-bottom: 1px solid #222; }
+        h2 { font-size: 2.2em; border-bottom: 2px solid #d4af37; display: inline-block; padding-bottom: 10px; margin-bottom: 40px; }
+        
+        /* ティアのデザイン */
+        .tier { border: 1px solid #d4af37; margin: 40px auto; padding: 35px; background: #0a0a0a; border-radius: 2px; text-align: left; }
+        .tier-label { font-size: 0.8em; color: #d4af37; text-transform: uppercase; letter-spacing: 2px; border: 1px solid #d4af37; padding: 2px 12px; display: inline-block; margin-bottom: 15px; }
+        h3 { font-size: 2em; margin: 10px 0; color: #fff; }
+        .tagline { font-weight: bold; color: #d4af37; font-size: 1.1em; margin-bottom: 15px; }
+        .price { font-size: 1.4em; color: #d4af37; font-weight: bold; margin-top: 20px; border-top: 1px solid #333; padding-top: 15px; }
+        
+        /* 応募ボタン */
+        .apply-btn { display: inline-block; background: #d4af37; color: #000; padding: 15px 40px; text-decoration: none; font-weight: bold; margin-top: 20px; transition: 0.3s; border: 1px solid #d4af37; }
+        .apply-btn:hover { background: transparent; color: #d4af37; }
+
+        /* プロフィール */
+        .profile-card { background: #111; padding: 40px; border-left: 4px solid #d4af37; text-align: left; }
+        .ceo-title { font-size: 0.9em; letter-spacing: 3px; color: #d4af37; }
+        .ceo-name { font-size: 1.8em; color: #fff; margin: 10px 0; }
+
+        footer { padding: 80px; color: #444; font-size: 0.8em; }
     </style>
 </head>
 <body>
     <header>
         <h1>C O M P A S S</h1>
-        <p style="letter-spacing: 5px; color: #d4af37;">THE PEAK OF JAPANESE STATIONERY</p>
+        <p style="letter-spacing: 5px; color: #d4af37; margin-top: 20px;">MADE IN JAPAN PRECISION</p>
     </header>
 
     <div class="section">
-        <div class="tier">
-            <span class="tier-label">極 - KIWAMI</span>
+        <h2>Founder & CEO</h2>
+        <div class="profile-card">
+            <p class="ceo-title">FOUNDER / DESIGNER</p>
+            <p class="ceo-name">Compass 創業者</p>
+            <p>愛知県岡崎市を拠点に活動する若きペン・デザイナー。<br>
+            「文房具を、単なる道具から一生のパートナーへ」という信念のもと、自らの手で設計・開発を行う。<br>
+            日本が誇る精密な加工技術と、最新のAI・デザイン思考を融合させ、筆記具の新たな地平を切り拓く。</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Product Lineup</h2>
+        
+        <div class="tier" style="border-width: 3px; box-shadow: 0 0 30px rgba(212, 175, 55, 0.2);">
+            <span class="tier-label">極 - Ultimate</span>
             <h3>Aeterna - エテルナ</h3>
             <p class="tagline">【体験】磁力ダンパー、鏡面研磨、重量調整。</p>
-            <p>一生モノの「作品」。持つ者の手に合わせて完璧に調整可能な、Compassの到達点。</p>
+            <p>一生モノの「作品」。持つ者の手に合わせて完璧に調整可能な、Compassの到達点。本モデルは完全受注生産につき、審査制の応募販売となります。</p>
             <p class="price">¥18,000</p>
+            <a href="https://docs.google.com/forms/" class="apply-btn">Aeterna 注文審査へ申し込む</a>
         </div>
 
         <div class="tier">
-            <span class="tier-label">松 - MATSU</span>
+            <span class="tier-label">松 - High-End</span>
             <h3>Oracle - オラクル</h3>
             <p class="tagline">【機構】静音ノック＆自動芯出し。</p>
             <p>集中を削がないステルス設計。思考を止めることなく、書き続けるための特殊機構。</p>
             <p class="price">¥9,000</p>
         </div>
 
-        <div class="tier">
-            <span class="tier-label">竹 - TAKE</span>
-            <h3>Zenith - ゼニス</h3>
-            <p class="tagline">【素材】特殊フィラメント（カーボン配合等）。</p>
-            <p>軽量かつ超高剛性。先端素材がもたらす、異次元の取り回しと安定感。</p>
-            <p class="price">¥5,500</p>
-        </div>
-
-        <div class="tier">
-            <span class="tier-label">間2 - MA 2</span>
-            <h3>Forge - フォージ</h3>
-            <p class="tagline">【操作性】滑り止めグリップ加工。</p>
-            <p>長時間の論文執筆に特化。指先の疲れを最小限に抑え、確実なホールドを約束する。</p>
-            <p class="price">¥3,000</p>
-        </div>
-
-        <div class="tier">
-            <span class="tier-label">間1 - MA 1</span>
-            <h3>Ignite - イグナイト</h3>
-            <p class="tagline">【精度】真鍮パイプ圧入。</p>
-            <p>ブレを消し、重心を下げる。ミリ単位の正確な筆記を可能にする、内部剛性モデル。</p>
-            <p class="price">¥1,200</p>
-        </div>
-
-        <div class="tier">
-            <span class="tier-label">梅 - UME / Basic</span>
-            <h3>SPARK - スパーク</h3>
-            <p class="tagline">【剛性】肉厚2.0mm。壊れないタフな基本形。</p>
-            <p>圧倒的な堅牢性。どんな過酷な現場でも、常に「書く」ことを裏切らない。Compassの原点。</p>
-            <p class="price">¥500</p>
-        </div>
+        <div class="tier"><span class="tier-label">竹</span><h3>Zenith - ゼニス</h3><p class="price">¥5,500</p></div>
+        <div class="tier"><span class="tier-label">間2</span><h3>Forge - フォージ</h3><p class="price">¥3,000</p></div>
+        <div class="tier"><span class="tier-label">間1</span><h3>Ignite - イグナイト</h3><p class="price">¥1,200</p></div>
+        <div class="tier"><span class="tier-label">梅</span><h3>SPARK - スパーク</h3><p class="price">¥500</p></div>
     </div>
 
     <footer>
-        <p>© 2026 Compass Project. Designed in Okazaki, Aichi.</p>
+        <p>© 2026 Compass Project. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
-
-
-
-
-
